@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* Glass effect for "Events Attended" */
+.glass-card {
+   backdrop-filter: blur(12px);
+   background: rgba(255, 255, 255, 0.2);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+   padding: 20px;
+   border-radius: 12px;
+   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+ 
+ .glass-card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 40px rgba(31, 38, 135, 0.3);
+ }
+ 
+ /* 🔹 Glass effect buttons */
+ .glass-button {
+   width: 90%;
+   padding: 14px;
+   font-size: 1rem;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: 500;
+   transition: all 0.3s ease-in-out;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Hover glow effect */
+ .glass-button:hover {
+   transform: scale(1.05);
+   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* 🔹 Background gradient */
+ body {
+   background: linear-gradient(to bottom right, #e3f2fd, #cfd8dc);
+ }
+
+ /* Sidebar menu links */
+.sidebar-link {
+   display: block;
+   padding: 12px;
+   font-size: 1.1rem;
+   color: white;
+   border-radius: 8px;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ /* Hover glow effect */
+ .sidebar-link:hover {
+   background: rgba(255, 255, 255, 0.2);
+   transform: translateX(4px);
+ }
+ 
+ /* Glassmorphic Sidebar */
+ aside {
+   backdrop-filter: blur(14px);
+   background: rgba(31, 38, 135, 0.3);
+   border-right: 1px solid rgba(255, 255, 255, 0.2);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Header glass effect */
+header {
+   backdrop-filter: blur(14px);
+   background: rgba(31, 38, 135, 0.3);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Profile hover animation */
+ .group:hover img {
+   border-color: #60a5fa; 
+ }
+ 
+ /* Smooth hover scale effect */
+ button:hover {
+   transform: scale(1.1);
+ }
+ 
+ @keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+ }
+ 
+ @keyframes slideUp {
+   from { transform: translateY(20px); opacity: 0; }
+   to { transform: translateY(0); opacity: 1; }
+ }
+ 
+ @keyframes slideDown {
+   from { transform: translateY(-20px); opacity: 0; }
+   to { transform: translateY(0); opacity: 1; }
+ }
+ 
+ @keyframes scaleUp {
+   from { transform: scale(0.8); opacity: 0; }
+   to { transform: scale(1); opacity: 1; }
+ }
+ 
+ .animate-fadeIn { animation: fadeIn 0.8s ease-in-out; }
+ .animate-slideUp { animation: slideUp 0.6s ease-in-out; }
+ .animate-slideDown { animation: slideDown 0.6s ease-in-out; }
+ .animate-scaleUp { animation: scaleUp 0.6s ease-in-out; }
+ .animate-fadeInSlow { animation: fadeIn 1.2s ease-in-out; }
+ 
+.group:hover .group-hover:block {
+   display: block;
+ }
+
+ .webcam-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.webcam-feed {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.webcam-overlay {
+  position: absolute;
+  inset: 0;
+  border: 4px solid #6366f1; /* Tailwind's indigo-500 color */
+  border-radius: 0.5rem;
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.profile-card {
+  background-size: 200% 200%;
+  transition: background-position 0.5s ease;
+}
+
+.profile-card:hover {
+  background-position: right center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.5s forwards;
+}
