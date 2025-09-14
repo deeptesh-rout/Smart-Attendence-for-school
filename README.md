@@ -38,7 +38,7 @@ With **real-time attendance tracking**, InstaMark enables **organizers, instruct
 ---
 
 # Clone the Repository  
-git clone --recurse-submodules https://github.com/Suryakantapani/InstaMark-Smart_Attendance-.git
+git clone https://github.com/deeptesh-rout/Smart-Attendence-for-school
 
 cd InstaMark-Smart_Attendance-
 
